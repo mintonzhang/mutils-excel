@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<project
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+        xmlns="http://maven.apache.org/POM/4.0.0">
+    <parent>
+        <groupId>cn.minsin.version</groupId>
+        <artifactId>mutils-version-pom</artifactId>
+        <version>1.0-RELEASE</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>cn.minsin.excel</groupId>
+    <artifactId>mutils-excel</artifactId>
+    <name>mutils-excel</name>
+    <version>1.0-RELEASE</version>
+    <description>
+        mutils组件中提供 Excel解析、导入等操作，该组件不可单独引用至maven依赖。详情请查看ExcelFunctions
+    </description>
+    <properties>
+        <poi.version>4.0.0</poi.version>
+        <mutils.excel.version>0.4.5.RELEASE</mutils.excel.version>
+        <mutils.core.version>4.0.1.RELEASE</mutils.core.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>cn.minsin.core</groupId>
+            <artifactId>mutils-core-web</artifactId>
+            <version>${mutils.core.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
+
+    </dependencies>
+</project>
