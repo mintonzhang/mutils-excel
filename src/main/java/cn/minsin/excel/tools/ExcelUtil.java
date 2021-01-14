@@ -1,5 +1,6 @@
 package cn.minsin.excel.tools;
 
+import cn.minsin.core.tools.IOUtil;
 import cn.minsin.core.tools.StringUtil;
 import lombok.Cleanup;
 import lombok.NonNull;
@@ -254,7 +255,7 @@ public class ExcelUtil {
 			ByteArrayInputStream inputStream = new ByteArrayInputStream(byteOutputStream.toByteArray());
 			return convert.apply(inputStream);
 		} finally {
-			if (workbook != null) workbook.close();
+			IOUtil.close(workbook);
 		}
 	}
 
@@ -273,9 +274,7 @@ public class ExcelUtil {
 			ByteArrayInputStream inputStream = new ByteArrayInputStream(byteOutputStream.toByteArray());
 			convert.accept(inputStream);
 		} finally {
-			if (workbook != null) {
-				workbook.close();
-			}
+			IOUtil.close(workbook);
 		}
 	}
 
@@ -309,7 +308,7 @@ public class ExcelUtil {
 			ServletOutputStream outputStream = httpServletResponse.getOutputStream();
 			workbook.write(outputStream);
 		} finally {
-			if (workbook != null) workbook.close();
+			IOUtil.close(workbook);
 		}
 	}
 }
