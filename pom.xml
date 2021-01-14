@@ -8,18 +8,16 @@
         <artifactId>mutils-version-pom</artifactId>
         <version>1.0-RELEASE</version>
     </parent>
-
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.minsin.excel</groupId>
     <artifactId>mutils-excel</artifactId>
     <name>mutils-excel</name>
-    <version>1.0-RELEASE</version>
+    <version>1.0.RELEASE</version>
     <description>
         mutils组件中提供 Excel解析、导入等操作，该组件不可单独引用至maven依赖。详情请查看ExcelFunctions
     </description>
     <properties>
         <poi.version>4.0.0</poi.version>
-        <mutils.excel.version>0.4.5.RELEASE</mutils.excel.version>
         <mutils.core.version>4.0.1.RELEASE</mutils.core.version>
     </properties>
     <dependencies>
