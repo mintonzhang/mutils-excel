@@ -6,7 +6,7 @@
     <parent>
         <groupId>cn.minsin.version</groupId>
         <artifactId>mutils-version-pom</artifactId>
-        <version>1.0-RELEASE</version>
+        <version>1.0.RELEASE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.minsin.excel</groupId>
@@ -34,6 +34,11 @@
             <artifactId>mutils-core</artifactId>
             <version>${mutils.core.version}</version>
         </dependency>
+        <dependency>
+            <groupId>cn.minsin.excel</groupId>
+            <artifactId>mutils-excel</artifactId>
+            <version>1.0.RELEASE</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
         <dependency>
             <groupId>org.apache.poi</groupId>
@@ -48,5 +53,4 @@
             <version>${poi.version}</version>
         </dependency>
     </dependencies>
-
 </project>
